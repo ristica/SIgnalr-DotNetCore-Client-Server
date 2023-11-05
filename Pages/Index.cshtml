@@ -1,0 +1,36 @@
+﻿@page
+
+<fieldset>
+    <div><b style="font-size: 14pt;">1) Connection Status:</b></div>
+    <hr style="margin-top: 0; margin-bottom: 10px;" />
+    <div>
+        <i><span id="connectionStatusSpan">Not connected to hub ...</span></i>
+        <input id="btnConnect" type="button" value="Connect to hub" style="float: right;" />
+    </div>
+</fieldset>
+
+<fieldset style="margin-top: 30px;">
+    <div><b style="font-size: 14pt;">2) Message:</b></div>
+    <hr style="margin-top: 0; margin-bottom: 10px;"/>
+    <input type="file" id="uploadFile" name="uploadFile"/>
+    <input id="btnUpload" type="button" value="Upload file to server" style="float: right;" />
+</fieldset>
+
+<fieldset style="margin-top: 30px;">
+    <div><b style="font-size: 14pt;">3) Server - Sent:</b></div>
+    <hr style="margin-top: 0; margin-bottom: 10px;" />
+    <div>File Name: <i><span id="fileNameSpan"></span></i></div>
+    <div>File Size: <i><span id="fileSizeSpan"></span></i></div>
+    <div id="success" style="font-weight:bold; color:green"></div>
+    <div id="error" style="font-weight:bold; color:red"></div>
+</fieldset>
+
+<fieldset style="margin-top: 30px;">
+    <div><b style="font-size: 14pt;">4) Client - Received:</b></div>
+    <hr style="margin-top: 0; margin-bottom: 10px;" />
+    <div>File Name: <i><span id="receivedFileNameSpan"></span></i></div>
+</fieldset>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
+<script src="~/lib/microsoft/signalr/myHub.js"></script>
